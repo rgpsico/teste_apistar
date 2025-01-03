@@ -27,7 +27,7 @@ Este é um projeto PHP para listar filmes, autenticar usuários e permitir que e
 ### 1. Clone o Repositório
 
 ```bash
-$ git clone https://github.com/rgpsico/teste_apistar
+$ git clone https://github.com/seu-repositorio/aqui.git
 $ cd nome-do-projeto
 ```
 
@@ -103,7 +103,12 @@ O servidor será iniciado em `http://localhost:8000`.
 - Apenas usuários autenticados podem favoritar filmes.
 - Os favoritos são armazenados no banco de dados e listados separadamente.
 
-### 4. Cache (opcional)
+### 4. Validação Personalizada
+
+- Sistema de validação criado do zero, permitindo regras como `required`, `unique`, `min`, `max`, entre outras.
+- Utiliza **Requests** para centralizar as validações.
+
+### 5. Cache (opcional)
 
 - Filmes podem ser armazenados em cache utilizando o Redis para melhorar o desempenho.
 
@@ -111,7 +116,7 @@ O servidor será iniciado em `http://localhost:8000`.
 
 ## Comandos Disponíveis
 
-### Criar Controllers, Models e Services
+### Criar Controllers, Models, Services e Requests
 
 1. Criar um **Controller** e **Service**:
 
@@ -131,6 +136,12 @@ $ php criar.php criar:controller NomeController -m NomeModel
 $ php criar.php criar:model NomeModel
 ```
 
+4. Criar um **Request**:
+
+```bash
+$ php criar.php criar:request NomeRequest
+```
+
 ---
 
 ## Estrutura do Projeto
@@ -144,6 +155,8 @@ $ php criar.php criar:model NomeModel
 │   ├── Services/       # Regras de negócio
 │   ├── Middleware/     # Middlewares
 │   ├── Views/          # Templates Blade
+│   ├── Requests/       # Validações customizadas
+│   ├── Validation/     # Classe Validator
 ├── config/
 │   ├── database.php    # Configurações do banco de dados
 │   ├── providers.php   # Providers para inicialização
@@ -185,18 +198,11 @@ Realize testes manuais via Postman ou cURL para verificar as funcionalidades das
 
 ---
 
-## Melhorias Futuras
-
-- Implementar validação mais robusta nas entradas.
-- Melhorar a interface com feedback visual aprimorado.
-- Adicionar paginação na lista de filmes e favoritos.
-- Implementar testes automatizados.
-
 ---
 
 ## Autor
 
-**Nome**
+**Seu Nome**
 
-- Email: Rogernevesn@gmail.com
+- Email: rogernevesn@gmail.com
 - GitHub: (https://github.com/rgpsico)
