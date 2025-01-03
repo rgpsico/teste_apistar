@@ -199,4 +199,4 @@ Realize testes manuais via Postman ou cURL para verificar as funcionalidades das
 **Nome**
 
 - Email: Rogernevesn@gmail.com
-- GitHub: [seu-github](https://github.com/rgpsico)
+- GitHub: (https://github.com/rgpsico)

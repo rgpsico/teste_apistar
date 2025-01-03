@@ -2,6 +2,88 @@
 
 require __DIR__ . '/vendor/autoload.php';
 
+
+
+function criarRequest($nome)
+{
+    // Nome da classe com "Request" no final
+    $nomeRequest = ucfirst($nome) . 'Request';
+
+    // Caminho da pasta onde os Requests serão salvos
+    $pastaRequests = __DIR__ . '/src/Requests';
+
+    // Criar a pasta caso não exista
+    if (!is_dir($pastaRequests)) mkdir($pastaRequests, 0755, true);
+
+    // Conteúdo básico do arquivo de Request
+    $conteudoRequest = <<<PHP
+<?php
+
+namespace MeuProjeto\Requests;
+
+use MeuProjeto\Validation\Validator;
+
+class {$nomeRequest}
+{
+    protected \$data;
+    protected \$pdo;
+
+    public function __construct(\$data, \$pdo)
+    {
+        \$this->data = \$data;
+        \$this->pdo = \$pdo;
+    }
+
+    public function validate()
+    {
+        \$rules = [
+            // Defina suas regras aqui. Exemplo:
+            //'campo' => 'required|min:3|max:50',
+        ];
+
+        \$validator = new Validator(\$this->data, \$rules, \$this->pdo);
+
+        if (!\$validator->validate()) {
+            return \$validator->getErrors();
+        }
+
+        return null; // Retorna null se não houver erros
+    }
+}
+PHP;
+
+    // Salvar o arquivo no diretório de Requests
+    $caminhoArquivo = "$pastaRequests/$nomeRequest.php";
+    file_put_contents($caminhoArquivo, $conteudoRequest);
+
+    echo "Request '$nomeRequest' criado com sucesso em $caminhoArquivo\n";
+}
+
+// Verificar argumentos do terminal
+$args = $argv;
+
+if (count($args) < 2) {
+    echo "Uso: php criar.php criar:request NomeRequest\n";
+    exit;
+}
+
+$command = $args[1];
+
+if ($command === 'criar:request') {
+    $nome = $args[2] ?? null;
+
+    if (!$nome) {
+        echo "Erro: Nome do request não especificado.\n";
+        exit;
+    }
+
+    criarRequest($nome);
+} else {
+    echo "Comando desconhecido.\n";
+}
+
+
+
 function criarModel($nome)
 {
     $nomeModel = ucfirst($nome);

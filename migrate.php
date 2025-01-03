@@ -3,6 +3,7 @@
 require __DIR__ . '/vendor/autoload.php';
 
 use Dotenv\Dotenv;
+use MeuProjeto\Config\DatabaseConfig;
 
 require_once __DIR__ . '/Config/database.php';
 require_once __DIR__ . '/src/Database/Blueprint.php';
