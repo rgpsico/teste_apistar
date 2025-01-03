@@ -32,7 +32,7 @@
         </tbody>
     </table>
 @endsection
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
 @section('scripts')
 <script>
     $(document).ready(function () {
@@ -91,7 +91,7 @@
                 error: function (xhr, status, error) {
                     console.error('Erro:', error);
                     console.error('Resposta do servidor:', xhr.responseText);
-                    alert('Erro ao buscar informações do usuário.');
+                    //alert('Erro ao buscar informações do usuário.');
                 }
             });
         }

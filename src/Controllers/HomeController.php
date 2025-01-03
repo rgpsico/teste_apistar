@@ -22,10 +22,6 @@ class HomeController
         $blade = require __DIR__ . '/../../config/blade.php';
 
         // Passar dados para a View
-        echo $blade->render('home', [
-            'titulo' => 'Meu Projeto MVC',
-            'pokemon' =>   $dados,
-            'mensagem' => 'AQui'
-        ]);
+        echo view('wecome');
     }
 }

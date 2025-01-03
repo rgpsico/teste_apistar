@@ -4,6 +4,7 @@ use FastRoute\RouteCollector;
 use MeuProjeto\Controllers\Api\StarWarsControllerApi;
 use MeuProjeto\Controllers\AuthController;
 use MeuProjeto\Controllers\FavoriteController;
+use MeuProjeto\Controllers\HomeController;
 use MeuProjeto\Controllers\StarWarsController;
 use MeuProjeto\Controllers\PokemonController;
 
@@ -11,8 +12,11 @@ use function FastRoute\simpleDispatcher;
 
 // Configure as rotas em uma única chamada ao simpleDispatcher
 $dispatcher = simpleDispatcher(function (RouteCollector $r) {
+    $r->addRoute('GET', '/', [HomeController::class, 'index']); // Lista Pokémon
+
+
     // Rotas Pokémon
-    $r->addRoute('GET', '/pokemon', [PokemonController::class, 'index']); // Lista Pokémon
+    $r->addRoute('GET', '/pokemons', [PokemonController::class, 'index']); // Lista Pokémon
     $r->addRoute('GET', '/pokemon/show/{id}', [PokemonController::class, 'show']); // Detalhes de Pokémon
     $r->addRoute('GET', '/pokemon/delete/{id}', [PokemonController::class, 'delete']); // Excluir Pokémon
 
