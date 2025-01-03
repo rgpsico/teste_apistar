@@ -27,8 +27,8 @@ Este é um projeto PHP para listar filmes, autenticar usuários e permitir que e
 ### 1. Clone o Repositório
 
 ```bash
-$ git clone https://github.com/seu-repositorio/aqui.git
-$ cd nome-do-projeto
+$ git clone https://github.com/rgpsico/teste_apistar
+$ cd teste_apistar
 ```
 
 ### 2. Instale as Dependências

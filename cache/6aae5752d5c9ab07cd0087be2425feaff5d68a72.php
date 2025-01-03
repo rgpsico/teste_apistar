@@ -11,6 +11,7 @@
             <tr>
                 <th>Título</th>
                 <th>Data de Lançamento</th>
+                <th>Idade</th>
                 <th>Ações</th>
             </tr>
         </thead>
@@ -19,6 +20,7 @@
                 <tr>
                     <td><?php echo e($movie['properties']['title']); ?></td>
                     <td><?php echo e(date('d/m/Y', strtotime($movie['properties']['release_date']))); ?></td>
+                    <td><?php echo e($movie['properties']['age']); ?> anos</td>
                     <td>
                         <a href="/movies/<?php echo e($movie['uid']); ?>" class="btn btn-primary btn-sm">Ver Detalhes</a>
                         <button 
@@ -30,6 +32,7 @@
                 </tr>
             <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
         </tbody>
+        
     </table>
 <?php $__env->stopSection(); ?>
 

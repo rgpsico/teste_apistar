@@ -2,6 +2,7 @@
 
 namespace MeuProjeto\Services;
 
+use DateTime;
 use Redis;
 
 class StarWarsService
@@ -35,6 +36,14 @@ class StarWarsService
         $response = file_get_contents('https://www.swapi.tech/api/films');
         $movies = json_decode($response, true)['result'];
 
+        // Adicionar a idade calculada para cada filme
+        foreach ($movies as &$movie) {
+            $releaseDate = new DateTime($movie['properties']['release_date']);
+            $now = new DateTime();
+            $interval = $releaseDate->diff($now);
+            $movie['properties']['age'] = $interval->y; // Idade em anos
+        }
+
         // Se o Redis estiver disponível, armazene os filmes no cache por 1 hora
         if ($this->redisAvailable) {
             $this->redis->set($cacheKey, json_encode($movies));
@@ -43,6 +52,7 @@ class StarWarsService
 
         return $movies;
     }
+
 
     public function show($id)
     {

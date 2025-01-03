@@ -11,6 +11,7 @@
             <tr>
                 <th>Título</th>
                 <th>Data de Lançamento</th>
+                <th>Idade</th>
                 <th>Ações</th>
             </tr>
         </thead>
@@ -19,6 +20,7 @@
                 <tr>
                     <td>{{ $movie['properties']['title'] }}</td>
                     <td>{{ date('d/m/Y', strtotime($movie['properties']['release_date'])) }}</td>
+                    <td>{{ $movie['properties']['age'] }} anos</td>
                     <td>
                         <a href="/movies/{{ $movie['uid'] }}" class="btn btn-primary btn-sm">Ver Detalhes</a>
                         <button 
@@ -30,6 +32,7 @@
                 </tr>
             @endforeach
         </tbody>
+        
     </table>
 @endsection
 
