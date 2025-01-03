@@ -42,23 +42,23 @@
                 method: 'GET',
                 headers: { Authorization: `Bearer ${authToken}` },
                 success: function (datafavorite) {
-                 //   console.log("Response recebido:", datafavorite); // Verificar a estrutura no console
+               
                     response = JSON.parse(datafavorite)
                     let favorites = [];
                     if (Array.isArray(response)) {
-                        // Extrair IDs de filmes se for um array
+                     
                         favorites = response.map(fav => fav.movie_id.toString());
                     } else if (response.favorites && Array.isArray(response.favorites)) {
-                        // Caso os favoritos estejam em uma propriedade chamada "favorites"
+                     
                         favorites = response.favorites.map(fav => fav.movie_id.toString());
                     } else {
                         console.error("Estrutura inesperada do response:", response);
                         return;
                     }
 
-                    // Atualizar ícones
+               
                     $('.favorite-btn').each(function () {
-                        const movieId = $(this).data('movie-id').toString(); // Garantir que seja string
+                        const movieId = $(this).data('movie-id').toString(); 
                         const icon = $(this).find('.heart-icon');
 
                         if (favorites.includes(movieId)) {
@@ -80,13 +80,13 @@
             $.ajax({
                 url: '/auth/user',
                 method: 'POST',
-                headers: { Authorization: `Bearer ${token}` }, // Adiciona "Bearer" ao token
+                headers: { Authorization: `Bearer ${token}` },
                 success: function (data) {
                     user = JSON.parse(data)
                 
                     $('#user-info').text(`Bem-vindo, ${user.name}!`);
-                    $('#login-btn').addClass('d-none'); // Esconde o botão de login
-                    $('#logout-btn').removeClass('d-none'); // Mostra o botão de logout
+                    $('#login-btn').addClass('d-none'); 
+                    $('#logout-btn').removeClass('d-none'); 
                 },
                 error: function (xhr, status, error) {
                     console.error('Erro:', error);
@@ -147,15 +147,15 @@
 
 
     $('#login-btn').click(function () {
-            $('#loginModal').modal('show');
+            $('#loginRegisterModal').modal('show');
     });
 
-// Processar login
-        $(document).on('click', '#login-button', function (e) {
+
+    $(document).on('click', '#login-button', function (e) {
             e.preventDefault();
 
-            const email = $('#email').val();
-            const password = $('#password').val();
+            const email = $('#login-email').val();
+            const password = $('#login-password').val();
 
             // Verificar se os campos estão preenchidos
             if (!email || !password) {
@@ -188,6 +188,36 @@
             }
             });
         });
+
+
+    $('#register-button').click(function () {
+        const name = $('#register-name').val();
+        const email = $('#register-email').val();
+        const password = $('#register-password').val();
+
+        if (!name || !email || !password) {
+            alert('Por favor, preencha todos os campos de registro.');
+            return;
+        }
+
+        $.ajax({
+            url: '/auth/register',
+            method: 'POST',
+            contentType: 'application/json',
+            data: JSON.stringify({ name, email, password }),
+            success: function (response) {
+                console.log(response)
+                alert(response);
+              
+                
+             
+                $('#loginRegisterModal').modal('hide');
+            },
+            error: function () {
+                alert('Erro ao realizar registro.');
+            }
+        });
+    });
 
 // Processar logout
         $('#logout-btn').click(function () {
