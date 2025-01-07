@@ -12,9 +12,10 @@ class StarWarsService
     public function __construct()
     {
         try {
-            // Tentativa de conexão ao Redis
+
+
             $this->redis = new Redis();
-            $this->redis->connect('127.0.0.1', 6379);
+            $this->redis->connect($_ENV['REDIS_HOST'], $_ENV['REDIS_PORT']);
             $this->redisAvailable = true; // Redis está disponível
         } catch (\RedisException $e) {
             // Caso o Redis falhe, log ou mensagem
