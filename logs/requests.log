@@ -1,0 +1,222 @@
+[2025-01-09 01:39:40] Nova requisição recebida
+{
+    "method": "GET",
+    "uri": "\/movies",
+    "headers": {
+        "Host": "localhost:8000",
+        "Connection": "keep-alive",
+        "Cache-Control": "max-age=0",
+        "sec-ch-ua": "\"Chromium\";v=\"116\", \"Not)A;Brand\";v=\"24\", \"CCleaner Browser\";v=\"116\"",
+        "sec-ch-ua-mobile": "?0",
+        "sec-ch-ua-platform": "\"Windows\"",
+        "DNT": "1",
+        "Upgrade-Insecure-Requests": "1",
+        "User-Agent": "Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/116.0.0.0 Safari\/537.36 CCleaner\/116.0.0.0",
+        "Accept": "text\/html,application\/xhtml+xml,application\/xml;q=0.9,image\/avif,image\/webp,image\/apng,*\/*;q=0.8,application\/signed-exchange;v=b3;q=0.7",
+        "Sec-Fetch-Site": "none",
+        "Sec-Fetch-Mode": "navigate",
+        "Sec-Fetch-User": "?1",
+        "Sec-Fetch-Dest": "document",
+        "Accept-Encoding": "gzip, deflate, br",
+        "Accept-Language": "pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7"
+    },
+    "body": ""
+}
+[2025-01-09 01:39:43] Nova requisição recebida
+{
+    "method": "POST",
+    "uri": "\/auth\/user",
+    "headers": {
+        "Host": "localhost:8000",
+        "Connection": "keep-alive",
+        "Content-Length": "0",
+        "sec-ch-ua": "\"Chromium\";v=\"116\", \"Not)A;Brand\";v=\"24\", \"CCleaner Browser\";v=\"116\"",
+        "DNT": "1",
+        "sec-ch-ua-mobile": "?0",
+        "Authorization": "Bearer a88272588d21e51a3c69d6ab6775a620fa8e4b993a01cb1d18d724743d0b4b07",
+        "User-Agent": "Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/116.0.0.0 Safari\/537.36 CCleaner\/116.0.0.0",
+        "Accept": "*\/*",
+        "X-Requested-With": "XMLHttpRequest",
+        "sec-ch-ua-platform": "\"Windows\"",
+        "Origin": "http:\/\/localhost:8000",
+        "Sec-Fetch-Site": "same-origin",
+        "Sec-Fetch-Mode": "cors",
+        "Sec-Fetch-Dest": "empty",
+        "Referer": "http:\/\/localhost:8000\/movies",
+        "Accept-Encoding": "gzip, deflate, br",
+        "Accept-Language": "pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7"
+    },
+    "body": ""
+}
+[2025-01-09 01:39:45] Nova requisição recebida
+{
+    "method": "GET",
+    "uri": "\/favorites",
+    "headers": {
+        "Host": "localhost:8000",
+        "Connection": "keep-alive",
+        "sec-ch-ua": "\"Chromium\";v=\"116\", \"Not)A;Brand\";v=\"24\", \"CCleaner Browser\";v=\"116\"",
+        "DNT": "1",
+        "sec-ch-ua-mobile": "?0",
+        "Authorization": "Bearer a88272588d21e51a3c69d6ab6775a620fa8e4b993a01cb1d18d724743d0b4b07",
+        "User-Agent": "Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/116.0.0.0 Safari\/537.36 CCleaner\/116.0.0.0",
+        "Accept": "*\/*",
+        "X-Requested-With": "XMLHttpRequest",
+        "sec-ch-ua-platform": "\"Windows\"",
+        "Sec-Fetch-Site": "same-origin",
+        "Sec-Fetch-Mode": "cors",
+        "Sec-Fetch-Dest": "empty",
+        "Referer": "http:\/\/localhost:8000\/movies",
+        "Accept-Encoding": "gzip, deflate, br",
+        "Accept-Language": "pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7"
+    },
+    "body": ""
+}
+[2025-01-09 01:40:19] Nova requisição recebida
+{
+    "method": "GET",
+    "uri": "\/movies",
+    "headers": {
+        "Host": "localhost:8000",
+        "Connection": "keep-alive",
+        "Cache-Control": "max-age=0",
+        "sec-ch-ua": "\"Chromium\";v=\"116\", \"Not)A;Brand\";v=\"24\", \"CCleaner Browser\";v=\"116\"",
+        "sec-ch-ua-mobile": "?0",
+        "sec-ch-ua-platform": "\"Windows\"",
+        "DNT": "1",
+        "Upgrade-Insecure-Requests": "1",
+        "User-Agent": "Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/116.0.0.0 Safari\/537.36 CCleaner\/116.0.0.0",
+        "Accept": "text\/html,application\/xhtml+xml,application\/xml;q=0.9,image\/avif,image\/webp,image\/apng,*\/*;q=0.8,application\/signed-exchange;v=b3;q=0.7",
+        "Sec-Fetch-Site": "none",
+        "Sec-Fetch-Mode": "navigate",
+        "Sec-Fetch-User": "?1",
+        "Sec-Fetch-Dest": "document",
+        "Accept-Encoding": "gzip, deflate, br",
+        "Accept-Language": "pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7"
+    },
+    "body": ""
+}
+[2025-01-09 01:40:24] Nova requisição recebida
+{
+    "method": "POST",
+    "uri": "\/auth\/user",
+    "headers": {
+        "Host": "localhost:8000",
+        "Connection": "keep-alive",
+        "Content-Length": "0",
+        "sec-ch-ua": "\"Chromium\";v=\"116\", \"Not)A;Brand\";v=\"24\", \"CCleaner Browser\";v=\"116\"",
+        "DNT": "1",
+        "sec-ch-ua-mobile": "?0",
+        "Authorization": "Bearer a88272588d21e51a3c69d6ab6775a620fa8e4b993a01cb1d18d724743d0b4b07",
+        "User-Agent": "Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/116.0.0.0 Safari\/537.36 CCleaner\/116.0.0.0",
+        "Accept": "*\/*",
+        "X-Requested-With": "XMLHttpRequest",
+        "sec-ch-ua-platform": "\"Windows\"",
+        "Origin": "http:\/\/localhost:8000",
+        "Sec-Fetch-Site": "same-origin",
+        "Sec-Fetch-Mode": "cors",
+        "Sec-Fetch-Dest": "empty",
+        "Referer": "http:\/\/localhost:8000\/movies",
+        "Accept-Encoding": "gzip, deflate, br",
+        "Accept-Language": "pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7"
+    },
+    "body": ""
+}
+[2025-01-09 01:40:26] Nova requisição recebida
+{
+    "method": "GET",
+    "uri": "\/favorites",
+    "headers": {
+        "Host": "localhost:8000",
+        "Connection": "keep-alive",
+        "sec-ch-ua": "\"Chromium\";v=\"116\", \"Not)A;Brand\";v=\"24\", \"CCleaner Browser\";v=\"116\"",
+        "DNT": "1",
+        "sec-ch-ua-mobile": "?0",
+        "Authorization": "Bearer a88272588d21e51a3c69d6ab6775a620fa8e4b993a01cb1d18d724743d0b4b07",
+        "User-Agent": "Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/116.0.0.0 Safari\/537.36 CCleaner\/116.0.0.0",
+        "Accept": "*\/*",
+        "X-Requested-With": "XMLHttpRequest",
+        "sec-ch-ua-platform": "\"Windows\"",
+        "Sec-Fetch-Site": "same-origin",
+        "Sec-Fetch-Mode": "cors",
+        "Sec-Fetch-Dest": "empty",
+        "Referer": "http:\/\/localhost:8000\/movies",
+        "Accept-Encoding": "gzip, deflate, br",
+        "Accept-Language": "pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7"
+    },
+    "body": ""
+}
+[2025-01-09 01:45:13] Nova requisição recebida
+{
+    "method": "GET",
+    "uri": "\/movies",
+    "headers": {
+        "Host": "localhost:8000",
+        "Connection": "keep-alive",
+        "Cache-Control": "max-age=0",
+        "sec-ch-ua": "\"Chromium\";v=\"116\", \"Not)A;Brand\";v=\"24\", \"CCleaner Browser\";v=\"116\"",
+        "sec-ch-ua-mobile": "?0",
+        "sec-ch-ua-platform": "\"Windows\"",
+        "DNT": "1",
+        "Upgrade-Insecure-Requests": "1",
+        "User-Agent": "Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/116.0.0.0 Safari\/537.36 CCleaner\/116.0.0.0",
+        "Accept": "text\/html,application\/xhtml+xml,application\/xml;q=0.9,image\/avif,image\/webp,image\/apng,*\/*;q=0.8,application\/signed-exchange;v=b3;q=0.7",
+        "Sec-Fetch-Site": "none",
+        "Sec-Fetch-Mode": "navigate",
+        "Sec-Fetch-User": "?1",
+        "Sec-Fetch-Dest": "document",
+        "Accept-Encoding": "gzip, deflate, br",
+        "Accept-Language": "pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7"
+    },
+    "body": ""
+}
+[2025-01-09 01:45:18] Nova requisição recebida
+{
+    "method": "POST",
+    "uri": "\/auth\/user",
+    "headers": {
+        "Host": "localhost:8000",
+        "Connection": "keep-alive",
+        "Content-Length": "0",
+        "sec-ch-ua": "\"Chromium\";v=\"116\", \"Not)A;Brand\";v=\"24\", \"CCleaner Browser\";v=\"116\"",
+        "DNT": "1",
+        "sec-ch-ua-mobile": "?0",
+        "Authorization": "Bearer a88272588d21e51a3c69d6ab6775a620fa8e4b993a01cb1d18d724743d0b4b07",
+        "User-Agent": "Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/116.0.0.0 Safari\/537.36 CCleaner\/116.0.0.0",
+        "Accept": "*\/*",
+        "X-Requested-With": "XMLHttpRequest",
+        "sec-ch-ua-platform": "\"Windows\"",
+        "Origin": "http:\/\/localhost:8000",
+        "Sec-Fetch-Site": "same-origin",
+        "Sec-Fetch-Mode": "cors",
+        "Sec-Fetch-Dest": "empty",
+        "Referer": "http:\/\/localhost:8000\/movies",
+        "Accept-Encoding": "gzip, deflate, br",
+        "Accept-Language": "pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7"
+    },
+    "body": ""
+}
+[2025-01-09 01:45:21] Nova requisição recebida
+{
+    "method": "GET",
+    "uri": "\/favorites",
+    "headers": {
+        "Host": "localhost:8000",
+        "Connection": "keep-alive",
+        "sec-ch-ua": "\"Chromium\";v=\"116\", \"Not)A;Brand\";v=\"24\", \"CCleaner Browser\";v=\"116\"",
+        "DNT": "1",
+        "sec-ch-ua-mobile": "?0",
+        "Authorization": "Bearer a88272588d21e51a3c69d6ab6775a620fa8e4b993a01cb1d18d724743d0b4b07",
+        "User-Agent": "Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/116.0.0.0 Safari\/537.36 CCleaner\/116.0.0.0",
+        "Accept": "*\/*",
+        "X-Requested-With": "XMLHttpRequest",
+        "sec-ch-ua-platform": "\"Windows\"",
+        "Sec-Fetch-Site": "same-origin",
+        "Sec-Fetch-Mode": "cors",
+        "Sec-Fetch-Dest": "empty",
+        "Referer": "http:\/\/localhost:8000\/movies",
+        "Accept-Encoding": "gzip, deflate, br",
+        "Accept-Language": "pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7"
+    },
+    "body": ""
+}

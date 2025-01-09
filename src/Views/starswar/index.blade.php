@@ -38,7 +38,8 @@
 @endsection
 
 @section('scripts')
-<script src="assets/js/jquery.js"></script>
+<script src=<?php echo asset('js/jquery.js'); ?>></script>
+
 <script>
     $(document).ready(function () {
         function loadFavorites(authToken) {
