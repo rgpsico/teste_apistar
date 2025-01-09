@@ -12,7 +12,7 @@ $dispatcher = simpleDispatcher(function (RouteCollector $r) {
 
 
     // Detalhes de um filme
-    $r->addRoute('GET', '/movies/{id}', [StarWarsControllerApi::class, 'show']);
+    $r->addRoute('GET', 'api//movies/{id}', [StarWarsControllerApi::class, 'show']);
 });
 
 require_once 'config.php';

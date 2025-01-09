@@ -7,10 +7,12 @@
 <?php $__env->startSection('content'); ?>
     <!-- Tabela de Filmes -->
     <table class="table table-striped">
+   
         <thead>
             <tr>
                 <th>Título</th>
                 <th>Data de Lançamento</th>
+                <th>Idade</th>
                 <th>Ações</th>
             </tr>
         </thead>
@@ -19,6 +21,7 @@
                 <tr>
                     <td><?php echo e($movie['properties']['title']); ?></td>
                     <td><?php echo e(date('d/m/Y', strtotime($movie['properties']['release_date']))); ?></td>
+                    <td><?php echo e($movie['properties']['age']); ?> anos</td>
                     <td>
                         <a href="/movies/<?php echo e($movie['uid']); ?>" class="btn btn-primary btn-sm">Ver Detalhes</a>
                         <button 
@@ -30,10 +33,12 @@
                 </tr>
             <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
         </tbody>
+        
     </table>
 <?php $__env->stopSection(); ?>
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
 <?php $__env->startSection('scripts'); ?>
+<script src="assets/js/jquery.js"></script>
 <script>
     $(document).ready(function () {
         function loadFavorites(authToken) {
@@ -91,7 +96,7 @@
                 error: function (xhr, status, error) {
                     console.error('Erro:', error);
                     console.error('Resposta do servidor:', xhr.responseText);
-                    alert('Erro ao buscar informações do usuário.');
+                    //alert('Erro ao buscar informações do usuário.');
                 }
             });
         }
@@ -169,7 +174,7 @@
             contentType: 'application/json',
             data: JSON.stringify({ email, password }),
             success: function (response) {
-                $('#loginModal').modal('hide');
+                $('#loginRegisterModal').modal('hide');
                 authToken = JSON.parse(response); // Armazenar o token
                 localStorage.setItem('authToken', authToken.token);
                 console.log(authToken.token)
@@ -177,7 +182,7 @@
                 loadFavorites(authToken.token)
                 
                 setTimeout(() => {
-                    location.reload();
+                   // location.reload();
                 }, 500);
             },
             error: function (xhr, status, error) {

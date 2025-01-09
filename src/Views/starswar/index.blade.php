@@ -7,6 +7,7 @@
 @section('content')
     <!-- Tabela de Filmes -->
     <table class="table table-striped">
+   
         <thead>
             <tr>
                 <th>Título</th>
@@ -37,6 +38,7 @@
 @endsection
 
 @section('scripts')
+<script src="assets/js/jquery.js"></script>
 <script>
     $(document).ready(function () {
         function loadFavorites(authToken) {
@@ -172,7 +174,7 @@
             contentType: 'application/json',
             data: JSON.stringify({ email, password }),
             success: function (response) {
-                $('#loginModal').modal('hide');
+                $('#loginRegisterModal').modal('hide');
                 authToken = JSON.parse(response); // Armazenar o token
                 localStorage.setItem('authToken', authToken.token);
                 console.log(authToken.token)
@@ -180,7 +182,7 @@
                 loadFavorites(authToken.token)
                 
                 setTimeout(() => {
-                    location.reload();
+                   // location.reload();
                 }, 500);
             },
             error: function (xhr, status, error) {
