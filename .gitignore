@@ -1,0 +1,22 @@
+# Ignorar node_modules
+node_modules/
+
+# Ignorar arquivos do sistema
+.DS_Store
+Thumbs.db
+
+# Ignorar logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Ignorar arquivos de build
+/dist/
+/build/
+
+/.env
+.env.*
+
+# Ignorar cache e configurações do Cypress
+cypress/videos/
+cypress/screenshots/
