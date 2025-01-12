@@ -29,6 +29,19 @@ class Blueprint
         $this->columns[] = "$column INT " . ($nullable ? "NULL" : "NOT NULL");
     }
 
+    public function enum($column, array $options, $default = null)
+    {
+        $enumValues = implode("','", $options);
+        $defaultClause = $default !== null ? "DEFAULT '$default'" : '';
+        $this->columns[] = "$column ENUM('$enumValues') $defaultClause NOT NULL";
+    }
+
+    public function boolean($column, $default = false)
+    {
+        $defaultValue = $default ? 1 : 0;
+        $this->columns[] = "$column TINYINT(1) NOT NULL DEFAULT $defaultValue";
+    }
+
     public function customTimestamp($column, $nullable = false)
     {
         $this->columns[] = "$column TIMESTAMP " . ($nullable ? "NULL" : "NOT NULL");

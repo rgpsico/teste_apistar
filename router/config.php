@@ -54,7 +54,7 @@ switch ($routeInfo[0]) {
         // Registrar o log antes de executar o método
         try {
             call_user_func_array([$controller, $method], $vars);
-            $logMiddleware->handle($uri, $httpMethod, 200, 'Requisição processada com sucesso');
+            $logMiddleware->handle($uri, $httpMethod, 200, 'Requisicao processada com sucesso');
         } catch (\Exception $e) {
             $logMiddleware->handle($uri, $httpMethod, 500, $e->getMessage());
             http_response_code(500);

@@ -3,6 +3,7 @@
 use FastRoute\RouteCollector;
 use MeuProjeto\Controllers\Api\StarWarsControllerApi;
 use MeuProjeto\Controllers\AuthController;
+use MeuProjeto\Controllers\ConfigController;
 use MeuProjeto\Controllers\FavoriteController;
 use MeuProjeto\Controllers\HomeController;
 use MeuProjeto\Controllers\StarWarsController;
@@ -25,6 +26,7 @@ $dispatcher = simpleDispatcher(function (RouteCollector $r) {
     $r->addRoute('GET', '/movies/{id}', [StarWarsController::class, 'show']);
 
 
+
     $r->addRoute('GET', '/api/movies', [StarWarsControllerApi::class, 'all']);
     $r->addRoute('GET', '/api/movies/{id}', [StarWarsControllerApi::class, 'show']);
 
@@ -40,6 +42,12 @@ $dispatcher = simpleDispatcher(function (RouteCollector $r) {
     $r->addRoute('POST', '/favorites', [FavoriteController::class, 'add']); // Adicionar favorito
     $r->addRoute('DELETE', '/favorites/{id}', [FavoriteController::class, 'remove']); // Remover favorito
     $r->addRoute('GET', '/favorites', [FavoriteController::class, 'list']); // Listar favoritos
+
+
+
+    $r->addRoute('GET', '/config', [ConfigController::class, 'index']);
+    $r->addRoute('GET', '/config/get', [ConfigController::class, 'getConfig']);
+    $r->addRoute('POST', '/config/save', [ConfigController::class, 'saveConfig']);
 });
 
 // Inclui a lógica para processar as rotas
