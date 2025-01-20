@@ -5,12 +5,7 @@ require __DIR__ . '/../vendor/autoload.php';
 use Dotenv\Dotenv;
 use Jenssegers\Blade\Blade;
 use MeuProjeto\Config\DatabaseConfig;
-
-// $redis = new Redis();
-// $redis->connect('127.0.0.1', 6379);
-// $redis->set('test', 'Conexão bem-sucedida!');
-// echo $redis->get('test');
-
+use MeuProjeto\Exceptions\DatabaseConnectionException;
 
 require_once  '../src/Helpers/helpers.php';
 
@@ -23,5 +18,17 @@ $dotenv = Dotenv::createImmutable(__DIR__ . '/../');
 $dotenv->load();
 
 $GLOBALS['blade'] = new Blade($views, $cache);
-$pdo = DatabaseConfig::connect('mysql');
+
+
+try {
+    $pdo = DatabaseConfig::connect('mysql');
+} catch (DatabaseConnectionException $e) {
+    http_response_code($e->getCode());
+    echo view('errors.exception', ['message' => $e->getMessage()]);
+    exit;
+} catch (\Exception $e) {
+    http_response_code(500);
+    echo view('errors.exception', ['message' => 'Um erro inesperado ocorreu.']);
+    exit;
+}
 require '../router/web.php';

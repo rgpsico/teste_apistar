@@ -3,6 +3,7 @@
 namespace MeuProjeto\Config;
 
 use Exception;
+use MeuProjeto\Exceptions\DatabaseConnectionException;
 use PDO;
 use PDOException;
 
@@ -49,7 +50,9 @@ class DatabaseConfig
 
             return $pdo;
         } catch (PDOException $e) {
-            throw new Exception("Erro ao conectar ao banco de dados: " . $e->getMessage());
+            throw new DatabaseConnectionException(
+                "Erro ao conectar ao banco de dados: " . $e->getMessage()
+            );
         }
     }
 }

@@ -711,3 +711,51 @@
     },
     "body": ""
 }
+[2025-01-12 16:35:31] Nova requisição recebida
+{
+    "method": "GET",
+    "uri": "\/movies",
+    "headers": {
+        "Connection": "keep-alive",
+        "accept": "text\/html,*\/*",
+        "user-agent": "Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/131.0.0.0 Safari\/537.36",
+        "host": "localhost:8000"
+    },
+    "body": ""
+}
+[2025-01-12 16:35:45] Nova requisição recebida
+{
+    "method": "GET",
+    "uri": "\/movies",
+    "headers": {
+        "Connection": "keep-alive",
+        "accept": "text\/html,*\/*",
+        "user-agent": "Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/131.0.0.0 Safari\/537.36",
+        "host": "localhost:8000"
+    },
+    "body": ""
+}
+[2025-01-12 16:36:43] Nova requisição recebida
+{
+    "method": "GET",
+    "uri": "\/movies",
+    "headers": {
+        "Connection": "keep-alive",
+        "accept": "text\/html,*\/*",
+        "user-agent": "Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/131.0.0.0 Safari\/537.36",
+        "host": "localhost:8000"
+    },
+    "body": ""
+}
+[2025-01-12 16:36:50] Nova requisição recebida
+{
+    "method": "GET",
+    "uri": "\/movies",
+    "headers": {
+        "Connection": "keep-alive",
+        "accept": "text\/html,*\/*",
+        "user-agent": "Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/131.0.0.0 Safari\/537.36",
+        "host": "localhost:8000"
+    },
+    "body": ""
+}
